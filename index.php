@@ -20,7 +20,7 @@
                 <li><a href="#service">サービス</a></li>
                 <li><a href="keijiban.php">掲示板</a></li>
                 <li><a href="#keijiban">ログイン</a></li>
-                <li><a href="form.php">問い合わせ</a></li>
+                <li><a href="form2.php">問い合わせ</a></li>
             </ul>
         </nav>
     </header>

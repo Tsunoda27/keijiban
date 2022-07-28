@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    color: #383e45;
+    color: #070632;
     font-size: 0.9rem;
 }
 
@@ -167,4 +167,112 @@ SP
         width: 100%;
         margin-bottom: 30px;
     }
+}
+
+/*-------------------------------------------
+      keijiban.php
+      -------------------------------------------*/
+
+.question {
+    font-weight: bold;
+}
+
+.msg {
+    font-weight: bold;
+    font-size: 18px;
+    color: red;
+}
+
+.keijiban-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/*-------------------------------------------
+      form2.php
+      -------------------------------------------*/
+
+.title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contact-form {
+    border: 1.5px solid black;
+    padding: 50px 30px;
+}
+
+.formlabel {
+    float: left;
+    margin-right: 10px;
+    width: 130px;
+    border-left: 3px solid red;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+form {
+    width: 460px;
+    margin: 0 auto;
+}
+
+.item {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.inputs {
+    float: left;
+    width: 300px;
+}
+
+input[type="text"],
+input[type="email"] {
+    border: solid 1px black;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+textarea {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    height: 160px;
+    width: 300px;
+    font-size: 15px;
+}
+
+.buttonarea {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: orange;
+    border: none;
+    padding: 10px 20px;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 5px;
+    box-shadow: 1px 1px 3px black;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    background-color: red;
+    border: none;
+    padding: 10px 20px;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 5px;
+    box-shadow: 1px 1px 3px black;
+    cursor: pointer;
 }
