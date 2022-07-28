@@ -13,14 +13,14 @@
 
 <body>
     <header id="header" class="wrapper">
-        <h1 class="site-title"><a href="index.html"><img src="img/logo.png" alt="私とみんなの目標掲示板"></a></h1>
+        <h1 class="site-title"><a href="index.php"><img src="img/logo.png" alt="私とみんなの目標掲示板"></a></h1>
         <nav>
             <ul>
                 <li><a href="#about">コンセプト</a></li>
                 <li><a href="#service">サービス</a></li>
-                <li><a href="#keijiban">掲示板</a></li>
+                <li><a href="keijiban.php">掲示板</a></li>
                 <li><a href="#keijiban">ログイン</a></li>
-                <li><a href="#keijiban">問い合わせ</a></li>
+                <li><a href="form.php">問い合わせ</a></li>
             </ul>
         </nav>
     </header>
@@ -52,7 +52,7 @@
             <h2 class="section-title">サービス</h2>
             <ul>
                 <li>
-                    <img src="img/service1.png" alt="service1">
+                    <a href="keijiban.php"><img src="img/service1.png" alt="service1"></a>
                     <h3 class="content-title">私の目標管理</h3>
                     <p>
                         •自分の目標を設定する<br>
@@ -62,7 +62,7 @@
                     </p>
                 </li>
                 <li>
-                    <img src="img/service2.png" alt="service2">
+                    <a href="keijiban.php"><img src="img/service2.png" alt="service2"></a>
                     <h3 class="content-title">みんなの目標管理</h3>
                     <p>
                         •みんなの目標を見て勇気をもらう<br>
@@ -72,7 +72,7 @@
                     </p>
                 </li>
                 <li>
-                    <img src="img/service3.png" alt="service3">
+                    <a href="form.php"><img src="img/service3.png" alt="service3"></a>
                     <h3 class="content-title">管理人へ問合せ</h3>
                     <p>ITスキルの低い管理人が、<br>
                         一生懸命対応します。<br>
