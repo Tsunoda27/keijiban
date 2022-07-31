@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <li><a href="index.php#about">コンセプト</a></li>
                 <li><a href="index.php#service">サービス</a></li>
                 <li><a href="keijiban.php">掲示板</a></li>
-                <li><a href="keijiban.php">ログイン</a></li>
+                <li><a href="login.php">ログイン</a></li>
                 <li><a href="form2.php">問い合わせ</a></li>
             </ul>
         </nav>

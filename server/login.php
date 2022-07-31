@@ -27,27 +27,22 @@
         </header>
     </div>
     <div class="contact-form">
-        <p class="title">お問合せ</p>
+        <p class="title">ログイン</p>
 
         <form action="kyoiku.chikara@gmail.com" method="post"></form>
-        <div class="item">
-            <label class="formlabel">ニックネーム</label><br>
-            <input type="text" class="inputs" name="name" required>
-        </div>
-
         <div class="item">
             <label class="formlabel">メールアドレス</label><br>
             <input type="email" class="inputs" name="email" required>
         </div>
 
         <div class="item">
-            <label class="formlabel">ご質問・ご要望等</label><br>
-            <textarea class="inputs" placeholder="ご質問・ご要望はこちら" required></textarea>
+            <label class="formlabel">パスワード</label><br>
+            <input type="text" class="inputs" name="name" required>
+            <!-- 上記パスワードで黒く表示させる -->
         </div>
 
         <div class="button-area">
-            <input type="submit" value="問い合わせる">
-            <input type="reset" value="リセット">
+            <input type="submit" value="ログイン">
         </div>
     </div>
     </form>
