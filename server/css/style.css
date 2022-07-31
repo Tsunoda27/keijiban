@@ -9,6 +9,11 @@ body {
     font-size: 0.9rem;
 }
 
+.wrapper {
+    margin: 0;
+    padding: 0 4%;
+}
+
 a {
     text-decoration: none;
 }
@@ -275,4 +280,177 @@ input[type="reset"] {
     margin: 0 5px;
     box-shadow: 1px 1px 3px black;
     cursor: pointer;
+}
+
+/*-------------------------------------------
+      signup.php
+      -------------------------------------------*/
+.signup_content {
+    background-color: #749ee6;
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+.signup_title {
+    text-align: center;
+}
+
+.email_label,
+.name_label,
+.password_label {
+    display: block;
+
+    width: 36vw;
+    margin: 10px 0px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    display: block;
+    width: 36vw;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+input[type="email"]::placeholder,
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #999999;
+}
+
+.button_area {
+    margin-top: 30px;
+    display: flex;
+    width: 36vw;
+    justify-content: space-between;
+}
+
+.signup_button {
+    background: #239bed;
+    padding: 15px 0;
+    width: 48%;
+    color: #FFFFFF;
+    letter-spacing: 0.5rem;
+    text-indent: 0.5rem;
+    border-radius: 30px;
+}
+
+.login_page_button {
+    text-align: center;
+    padding: 15px 0;
+    width: 48%;
+    background: #000000;
+    color: #FFFFFF;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+/*-------------------------------------------
+      login.php
+      -------------------------------------------*/
+.signup_button,
+.login_button {
+    background: #239bed;
+    padding: 15px 0;
+    width: 48%;
+    color: #FFFFFF;
+    letter-spacing: 0.5rem;
+    text-indent: 0.5rem;
+    border-radius: 30px;
+}
+
+.login_page_button,
+.signup_page_button {
+    text-align: center;
+    padding: 15px 0;
+    width: 48%;
+    background: #000000;
+    color: #FFFFFF;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+/* login.php */
+.login_content {
+    background-color: #DDDDDD;
+    border-radius: 10px;
+    width: 500px;
+    height: 400px;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+.login_title {
+    text-align: center;
+}
+
+.login_button {
+    border-radius: 30px;
+    background: #239bed;
+    padding: 15px 0;
+    width: 48%;
+    color: #FFFFFF;
+    letter-spacing: 0.5rem;
+    text-indent: 0.5rem
+}
+
+.signup_page_button {
+    border-radius: 30px;
+    text-align: center;
+    padding: 15px 0;
+    width: 48%;
+    background: #000000;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+/*-------------------------------------------
+      signup.php レスポンシブ
+      -------------------------------------------*/
+.signup_content {
+    width: 50%;
+}
+
+.button_area {
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+.signup_button {
+    width: 100%;
+    padding: 10px;
+}
+
+.login_page_button {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+/*-------------------------------------------
+      login.php レスポンシブ レスポンシブ
+      -------------------------------------------*/
+
+.login_content {
+    width: 50%;
+}
+
+.login_button {
+    width: 100%;
+    padding: 10px;
+}
+
+.signup_page_button {
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
 }

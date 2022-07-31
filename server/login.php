@@ -1,51 +1,25 @@
-<!DOCTYPE html>
-<html>
+  <!DOCTYPE html>
+  <html lang="ja">
+  <?php include_once __DIR__ . '/_head.php' ?>
 
-<head>
-    <meta charset="utf-8">
-    <title>問い合わせ</title>
-    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+      <?php include_once __DIR__ . '/_header.php' ?>
 
-<body>
-    <div>
-        <header id="header" class="wrapper">
-            <h1 class="site-title"><a href="index.php"><img src="img/logo.png" alt="私とみんなの目標掲示板"></a></h1>
-            <nav>
-                <ul>
-                    <li><a href="index.php#about">コンセプト</a></li>
-                    <li><a href="index.php#service">サービス</a></li>
-                    <li><a href="keijiban.php">掲示板</a></li>
-                    <li><a href="login.php">ログイン</a></li>
-                    <li><a href="form2.php">問い合わせ</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-    <div class="contact-form">
-        <p class="title">ログイン</p>
+      <section class="login_content wrapper">
+          <h1 class="login_title">ログイン</h1>
+          <form class="login_form" action="" method="post">
+              <label class="email_label" for="email">メールアドレス</label>
+              <input type="email" name="email" id="email" placeholder="Email">
+              <label class="password_label" for="password">パスワード</label>
+              <input type="password" name="password" id="password" placeholder="Password">
+              <div class="button_area">
+                  <input type="submit" value="ログイン" class="login_button">
+                  <a href="signup.php" class="signup_page_button">新規ユーザー登録</a>
+              </div>
+          </form>
+      </section>
 
-        <form action="kyoiku.chikara@gmail.com" method="post"></form>
-        <div class="item">
-            <label class="formlabel">メールアドレス</label><br>
-            <input type="email" class="inputs" name="email" required>
-        </div>
+      <?php include_once __DIR__ . '/_footer.php' ?>
+  </body>
 
-        <div class="item">
-            <label class="formlabel">パスワード</label><br>
-            <input type="text" class="inputs" name="name" required>
-            <!-- 上記パスワードで黒く表示させる -->
-        </div>
-
-        <div class="button-area">
-            <input type="submit" value="ログイン">
-        </div>
-    </div>
-    </form>
-</body>
-
-</html>
+  </html>
