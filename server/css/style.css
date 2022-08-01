@@ -203,7 +203,15 @@ SP
       keijiban_kakikomi.php
       -------------------------------------------*/
 .question {
+    float: left;
+    margin-left: 15px;
     font-weight: bold;
+}
+
+.form_question {
+    float: center;
+    margin: auto;
+    /* font-weight: bold; */
 }
 
 .msg {
@@ -217,6 +225,28 @@ SP
     font-size: 20px;
     margin-bottom: 20px;
     font-weight: bold;
+}
+
+.answer {
+    border: 1px solid black;
+    /* border-radius: 5px; */
+    padding: 10px;
+    margin-bottom: 30px;
+    height: 160px;
+    width: 400px;
+    font-size: 15px;
+}
+
+.answer_short {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    font-size: 15px;
+}
+
+.kakikomi_button {
+    text-align: center;
 }
 
 /*-------------------------------------------
@@ -313,10 +343,10 @@ input[type="reset"] {
 .signup_content {
     background-color: #749ee6;
     border-radius: 10px;
-    width: 500px;
+    width: 450px;
     height: 550px;
     margin: 50px auto;
-    padding: 50px;
+    padding: 40px;
 }
 
 .signup_title {
@@ -328,14 +358,14 @@ input[type="reset"] {
 .password_label {
     display: block;
     width: auto;
-    margin: 10px 0px;
+    margin: 10px;
 }
 
 input[type="email"],
 input[type="text"],
 input[type="password"] {
-    display: block;
-    width: 28vw;
+    display: center;
+    width: 24vw;
     background-color: #FFFFFF;
     border-radius: 6px;
     margin-bottom: 10px;
@@ -351,7 +381,7 @@ input[type="password"]::placeholder {
 .button_area {
     margin-top: 30px;
     display: flex;
-    width: 27vw;
+    /* width: 24vw; */
     justify-content: space-between;
 }
 
@@ -366,7 +396,9 @@ input[type="password"]::placeholder {
 .login_page_button {
     text-align: center;
     padding: 15px 0;
-    width: 48%;
+    width: 50%;
+    letter-spacing: 0.5rem;
+    text-indent: 0.5rem;
     background: #000000;
     color: #FFFFFF;
     /* border-radius: 30px; */
@@ -444,16 +476,12 @@ input[type="password"]::placeholder {
 }
 
 /*-------------------------------------------
-      keijiban_kakikomi.php 
+      thanks.php
       -------------------------------------------*/
+.thanks {
+    text-align: center;
+    padding: 50px 0;
 
-.answer {
-    border: 1px solid black;
-    /* border-radius: 5px; */
-    padding: 10px;
-    height: 160px;
-    width: 465px;
-    font-size: 15px;
 }
 
 /*-------------------------------------------

@@ -7,7 +7,7 @@
     <?php include_once __DIR__ . '/_header.php' ?> <div class="contact-form">
         <p class="form_title">お問合せ</p>
 
-        <form action="kyoiku.chikara@gmail.com" method="post">
+        <form action="thanks.php" method="post">
         <!-- </form> -->
         <div class="item">
             <label class="formlabel">ニックネーム</label><br>

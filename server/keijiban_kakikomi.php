@@ -46,10 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <li><?= $err_msg ?></li>
                     </ul>
                 <?php endif; ?>
-                <div>
-                    <div>
+                </div>
+                    <div class="form_question wrapper">
                         <label class="question">1.ニックネーム(必須)</label><br>
-                        <input type="text" name="num1" required><br><br>
+                        <input type="text" name="num1" class="answer_short" required><br><br>
                         <label class="question">2.私の生きる目的(必須)</label><br>
                         <textarea name="num2" class="answer" placeholder="あなたがどんな人生を歩みたいか、その目的を考えて記入してみましょう" required></textarea><br>
                         <label class="question">3.目的を達成するための目標(必須)</label><br>
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label class="question">7.目標達成の期日(必須)</label><br>
                         <input type="text" name="num7" required><br><br>
                     </div>
-                    <div>
+                    <div class="kakikomi_button">
                         <input type="submit" value="書き込む">
                     </div>
         </form>
