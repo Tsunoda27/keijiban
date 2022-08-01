@@ -5,9 +5,10 @@
 
 <body>
     <?php include_once __DIR__ . '/_header.php' ?> <div class="contact-form">
-        <p class="title">お問合せ</p>
+        <p class="form_title">お問合せ</p>
 
-        <form action="kyoiku.chikara@gmail.com" method="post"></form>
+        <form action="kyoiku.chikara@gmail.com" method="post">
+        <!-- </form> -->
         <div class="item">
             <label class="formlabel">ニックネーム</label><br>
             <input type="text" class="inputs" name="name" required>

@@ -6,7 +6,7 @@
 <body>
     <?php include_once __DIR__ . '/_header.php' ?>
     <section class="signup_content wrapper">
-        <h1 class="signup_title">新規ユーザー登録</h1>
+        <h1 class="signup_title">新規ユーザー登録 (無料)</h1>
         <form class="signup_form" action="" method="post">
             <label class="email_label" for="email">メールアドレス</label>
             <input type="email" name="email" id="email" placeholder="Email">
@@ -20,7 +20,9 @@
             </div>
         </form>
     </section>
+
     <?php include_once __DIR__ . '/_footer.php' ?>
+
 </body>
 
 </html>
