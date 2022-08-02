@@ -99,3 +99,38 @@ function check_exist_user($email)
     }
     return $err;
 }
+
+function login_validate($email, $password)
+{
+    $errors = [];
+
+    if (empty($email)) {
+        $errors[] = MSG_EMAIL_REQUIRED;
+    }
+
+    if (empty($password)) {
+        $errors[] = MSG_PASSWORD_REQUIRED;
+    }
+
+    return $errors;
+}
+
+function find_user_by_email($email)
+{
+    $dbh = connect_db();
+
+    $sql = <<<EOM
+    SELECT
+        *
+    FROM
+        users
+    WHERE
+        email = :email;
+    EOM;
+
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+    $stmt->execute();
+
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}

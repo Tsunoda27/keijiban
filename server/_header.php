@@ -9,4 +9,16 @@
             <li><a href="form2.php">問い合わせ</a></li>
         </ul>
     </nav>
+    <div class="right_content">
+        <div class="login_info">
+            <?php if (!empty($current_user)) : ?>
+                <p>
+                    <?= $current_user['name'] ?>さん
+                </p>
+                <a class="header_logout_button" href="logout.php" class="nav-link">ログアウト</a>
+                <!-- ?php else : ? -->
+                <!-- <a class="header_login_button" href="login.php" class="nav-link">ログイン</a> -->
+            <?php endif; ?>
+        </div>
+    </div>
 </header>

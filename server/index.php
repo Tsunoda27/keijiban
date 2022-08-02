@@ -5,6 +5,16 @@ require_once __DIR__ . '/common/functions.php';
 
 // データベースに接続
 $dbh = connect_db();
+
+// セッション開始
+session_start();
+
+$current_user = '';
+
+if (isset($_SESSION['current_user'])) {
+    $current_user = $_SESSION['current_user'];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -12,8 +22,12 @@ $dbh = connect_db();
 <?php include_once __DIR__ . '/_head.php' ?>
 
 <body>
-    <?php include_once __DIR__ . '/_header.php'?>
-
+    <?php include_once __DIR__ . '/_header.php' ?>
+    <?php if (!empty($current_user)) : ?>
+        <a href="keijiban_kakikomi.php" class="add_button">
+            <i class="fa-solid fa-plus"></i>
+        </a>
+    <?php endif; ?>
     <main>
         <div id="mainvisual">
             <img src="img/mainvisual.jpg" alt="mainvisual">
@@ -71,7 +85,7 @@ $dbh = connect_db();
         </section>
     </main>
 
-<?php include_once __DIR__ . '/_footer.php'?>
+    <?php include_once __DIR__ . '/_footer.php' ?>
 
 </body>
 
