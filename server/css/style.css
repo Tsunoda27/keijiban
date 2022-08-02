@@ -415,6 +415,13 @@ input[type="password"]::placeholder {
     cursor: pointer; */
 }
 
+.errors li {
+    margin-top: 5px;
+    color: #ec008c;
+    text-align: center;
+    list-style: none;
+}
+
 /*-------------------------------------------
       login.php
       -------------------------------------------*/
