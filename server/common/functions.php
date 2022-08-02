@@ -134,3 +134,28 @@ function find_user_by_email($email)
 
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+
+// internet_formのDB接続について 
+function search_list($keyword_param)
+{
+    $dbh = connect_db();
+
+    $sql = <<<EOM
+    SELECT
+        *
+    FROM
+        internet_forum
+    WHERE
+        description LIKE :keyword
+    EOM;
+
+    $stmt = $dbh->prepare($sql);
+
+    $stmt->bindValue(':keyword', $keyword_param, PDO::PARAM_STR);
+
+    $stmt->execute();
+
+    $lists = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $lists;
+}

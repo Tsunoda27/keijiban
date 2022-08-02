@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ((empty($num1)) || empty($num2) || empty($num3) || empty($num4) || empty($num5) || empty($num6) || empty($num7)) {
         $err_msg = '全ての項目を入力してください';
     } else {
-        $msg = "入力お疲れ様でした!!" . PHP_EOL . "あなたの目標を応援しています!!";
+        $msg = "入力お疲れ様でした!!" . PHP_EOL . "目標掲示板に反映させていただきました。" . PHP_EOL . "あなたの目標達成を心から応援しています!!";
     }
 }
 ?>
