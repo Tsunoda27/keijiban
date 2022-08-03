@@ -101,7 +101,7 @@ li {
 
 .header_logout_button {
     display: flex;
-  justify-content: flex-end;
+    justify-content: flex-end;
     font-size: 15px;
     color: #24292e;
     text-decoration: none;
@@ -226,7 +226,8 @@ SP
     font-weight: bold;
     font-size: 20px;
     margin-left: 2px;
-    border-left: double 8px red;/*左線*/
+    border-left: double 8px red;
+    /*左線*/
 }
 
 .keijiban_answer {
@@ -241,12 +242,14 @@ SP
 }
 
 .kugirisen1 {
-    border-top: 3px solid navy; /* 赤 */
+    border-top: 3px solid navy;
+    /* 赤 */
     margin: 1em 0;
 }
 
 .kugirisen2 {
-    border-top: 3px solid red; /* 赤 */
+    border-top: 3px solid red;
+    /* 赤 */
 }
 
 .add_button {
@@ -556,7 +559,17 @@ input[type="password"]::placeholder {
 .thanks {
     text-align: center;
     padding: 50px 0;
+}
 
+.thanks_msg {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.thanks_back {
+    text-align: center;
+    font-size: 15px;
 }
 
 /*-------------------------------------------

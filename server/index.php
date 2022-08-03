@@ -57,28 +57,26 @@ if (isset($_SESSION['current_user'])) {
                 <li>
                     <a href="keijiban.php"><img src="img/service1.png" alt="service1"></a>
                     <h3 class="content-title">私の目標管理</h3>
-                    <p>
-                        •自分の目標を設定する<br>
-                        •自分自身を振り返る<br>
-                        •新しい目標を立てる<br>
-                        あなたの目標が、みんなの人生を変える<br>
+                    <p>自分の目標を設定する</P>
+                    <p>自分自身を振り返る</P>
+                    <p>新しい目標を立てる</P>
+                    <p>※掲示板投稿は無料会員登録が必要です</p>
                     </p>
                 </li>
                 <li>
                     <a href="keijiban.php"><img src="img/service2.png" alt="service2"></a>
                     <h3 class="content-title">みんなの目標管理</h3>
-                    <p>
-                        •みんなの目標を見て勇気をもらう<br>
-                        •多様な価値観に触れる<br>
-                        •ステキなところを参考に!<br>
-                        •私の人生を見直す機会に!<br>
+                    <p>みんなの目標を見て勇気をもらう</p>
+                    <p>多様な価値観に触れる</p>
+                    <p>ステキなところを参考に!</p>
+                    <p>私の人生を見直す機会に!</p>
                     </p>
                 </li>
                 <li>
-                    <a href="form.php"><img src="img/service3.png" alt="service3"></a>
+                    <a href="form2.php"><img src="img/service3.png" alt="service3"></a>
                     <h3 class="content-title">管理人へ問合せ</h3>
-                    <p>ITスキルの低い管理人が、<br>
-                        一生懸命対応します。<br>
+                    <p>ITスキルの低い管理人が、</p>
+                    <p>一生懸命対応します!!</p>
                     </p>
                 </li>
             </ul>
