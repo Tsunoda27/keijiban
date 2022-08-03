@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             </a>
         </section>
 
-    <h2>わたしとみんなの目標掲示板</h2>
+    <h2 class="keijiban_title">わたしとみんなの目標掲示板</h2>
 
     <form action="keijiban.php" method="get">
         <span>キーワード:</span>
@@ -41,16 +41,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     <?php foreach ($lists as $list) : ?>
         <br>
-        <p><?= 'ニックネーム' . PHP_EOL . h($list['name']) ?></p>
-        <p><?= '私の生きる目的' . PHP_EOL . h($list['goal']) ?></p>
-        <p><?= '目的を達成するための目標' . PHP_EOL . h($list['target']) ?></p>
-        <p><?= '目標を達成するためのアクション' . PHP_EOL . h($list['action']) ?></p>
-        <p><?= '目的達成における不安要素' . PHP_EOL . h($list['anxiety']) ?></p>
-        <p><?= '私の性格特性' . PHP_EOL . h($list['personality']) ?></p>
-        <p><?= '目標達成の期日' . PHP_EOL . h($list['deadline']) ?></p>
-        <p><?= '投稿日時' . PHP_EOL . h($list['creared_at']) ?></p>
-        <br>
-        <hr>
+        <p class="keijiban_label">ニックネーム</p>
+        <p class="keijiban_answer"><?= h($list['name']) ?></p><br>
+        <p class="keijiban_label">私の生きる目的</p>
+        <p class="keijiban_answer"> <?= h($list['goal']) ?></p><br>
+        <p class="keijiban_label">目的を達成するための目標</p>
+        <p class="keijiban_answer"><?= h($list['target']) ?></p><br>
+        <p class="keijiban_label">目標を達成するためのアクション</p>
+        <p class="keijiban_answer"><?= h($list['action']) ?></p><br>
+        <p class="keijiban_label">目的達成における不安要素</p>
+        <p class="keijiban_answer"><?= h($list['anxiety']) ?></p><br>
+        <p class="keijiban_label">私の性格特性</p>
+        <p class="keijiban_answer"><?= h($list['personality']) ?></p><br>
+        <p class="keijiban_label">目標達成の期日</p> 
+        <p class="keijiban_answer"><?= h($list['deadline']) ?></p><br>
+        <!-- <p>< '投稿日時' . PHP_EOL . h($list['creared_at']) ?></p> -->
+        <hr class="kugirisen1">
+        <hr class="kugirisen2">
     <?php endforeach; ?>
 
     </main>

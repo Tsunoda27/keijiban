@@ -211,8 +211,42 @@ SP
 /*-------------------------------------------
       keijiban.php
       -------------------------------------------*/
+.keijiban_title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 80px;
+    font-weight: bold;
+}
+
 .kakikomilink {
-    margin: 6vh 0 10% 0;
+    /* margin: 6vh 0 10% 0; */
+}
+
+.keijiban_label {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 2px;
+    border-left: double 8px red;/*左線*/
+}
+
+.keijiban_answer {
+    font-size: 16px;
+    margin-left: 30px;
+    padding: 8px 19px;
+    margin: 1em 0;
+    color: #2c2c2f;
+    background: #cde4ff;
+    border-top: solid 5px #5989cf;
+    border-bottom: solid 5px #5989cf;
+}
+
+.kugirisen1 {
+    border-top: 3px solid navy; /* 赤 */
+    margin: 1em 0;
+}
+
+.kugirisen2 {
+    border-top: 3px solid red; /* 赤 */
 }
 
 .add_button {

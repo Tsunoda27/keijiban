@@ -135,7 +135,57 @@ function find_user_by_email($email)
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-// internet_formのDB接続について 
+// keijiban_kakikomi.phpの入力からDB登録
+function insert_keijiban($user_id, $nickname, $goal, $target, $action, $anxiety, $personality, $deadline)
+{
+    // データベースに接続
+    $dbh = connect_db();
+
+    // レコードを追加
+    $sql = <<<EOM
+    INSERT INTO
+        internet_forum
+        (user_id, name, goal, target, action, anxiety, personality, deadline)
+    VALUES
+        (:user_id, :name, :goal, :target, :action, :anxiety, :personality, :deadline)
+    EOM;
+
+    // プリペアドステートメントの準備
+    $stmt = $dbh->prepare($sql);
+
+    // パラメータのバインド
+    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+    $stmt->bindValue(':name', $nickname, PDO::PARAM_STR);
+    $stmt->bindValue(':goal', $goal, PDO::PARAM_STR);
+    $stmt->bindValue(':target', $target, PDO::PARAM_STR);
+    $stmt->bindValue(':action', $action, PDO::PARAM_STR);
+    $stmt->bindValue(':anxiety', $anxiety, PDO::PARAM_STR);
+    $stmt->bindValue(':personality', $personality, PDO::PARAM_STR);
+    $stmt->bindValue(':deadline', $deadline, PDO::PARAM_STR);
+
+    // プリペアドステートメントの実行
+    $stmt->execute();
+}
+
+
+// internet_formのDBからkeijiban.phpに表示する
+function display_list()
+{
+    $dbh = connect_db();
+    $sql = <<<EOM
+    SELECT
+        *
+    FROM
+        internet_forum
+    EOM;
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+    $lists = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $lists;
+}
+
+// internet_formのDBから、検索して該当する値を表示する
 function search_list($keyword_param)
 {
     $dbh = connect_db();
@@ -146,7 +196,7 @@ function search_list($keyword_param)
     FROM
         internet_forum
     WHERE
-        description LIKE :keyword
+        goal LIKE :keyword
     EOM;
 
     $stmt = $dbh->prepare($sql);
