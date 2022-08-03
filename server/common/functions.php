@@ -145,16 +145,15 @@ function insert_keijiban($user_id, $nickname, $goal, $target, $action, $anxiety,
     $sql = <<<EOM
     INSERT INTO
         internet_forum
-        (user_id, name, goal, target, action, anxiety, personality, deadline)
+        ( name, goal, target, action, anxiety, personality, deadline)
     VALUES
-        (:user_id, :name, :goal, :target, :action, :anxiety, :personality, :deadline)
+        ( :name, :goal, :target, :action, :anxiety, :personality, :deadline)
     EOM;
 
     // プリペアドステートメントの準備
     $stmt = $dbh->prepare($sql);
 
     // パラメータのバインド
-    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
     $stmt->bindValue(':name', $nickname, PDO::PARAM_STR);
     $stmt->bindValue(':goal', $goal, PDO::PARAM_STR);
     $stmt->bindValue(':target', $target, PDO::PARAM_STR);
