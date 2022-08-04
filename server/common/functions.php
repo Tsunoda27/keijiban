@@ -175,7 +175,7 @@ function display_list()
     SELECT
         *
     FROM
-        internet_forum
+        internet_forum ORDER BY id DESC;
     EOM;
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
@@ -207,4 +207,24 @@ function search_list($keyword_param)
     $lists = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     return $lists;
+}
+
+function find_mydata($id)
+{
+    $dbh = connect_db();
+
+    $sql = <<<EOM
+    SELECT 
+        * 
+    FROM 
+        internet_forum
+    WHERE 
+        id = :id;
+    EOM;
+    
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+
+    return $stmt->fetch(PDO::FETCH_ASSOC);
 }
