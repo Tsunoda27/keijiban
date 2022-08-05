@@ -2,6 +2,15 @@
 // 関数ファイルを読み込む
 require_once __DIR__ . '/common/functions.php';
 
+// // セッション開始
+// session_start();
+
+// $current_user = '';
+
+// if (isset($_SESSION['current_user'])) {
+//     $current_user = $_SESSION['current_user'];
+// }
+
 // 変数の初期化
 $email = '';
 $name = '';

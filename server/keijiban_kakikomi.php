@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $anxiety = filter_input(INPUT_POST, 'anxiety');
     $personality = filter_input(INPUT_POST, 'personality');
     $deadline = filter_input(INPUT_POST, 'deadline');
-    insert_keijiban($user_id, $nickname, $goal, $target, $action, $anxiety, $personality, $deadline);
+    insert_keijiban($current_user['id'], $nickname, $goal, $target, $action, $anxiety, $personality, $deadline);
     // $num1 = $_POST['name'];
     // $num2 = $_POST['goal'];
     // $num3 = $_POST['target'];
