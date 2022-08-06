@@ -210,7 +210,7 @@ function search_list($keyword_param)
     return $lists;
 }
 
-function delete_mydata($id)
+function delete_mydata($user_id)
 {
     $dbh = connect_db();
 
@@ -218,14 +218,49 @@ function delete_mydata($id)
     SELECT 
         * 
     FROM 
-        internet_forum
+        internet_forum ORDER BY created_at DESC;
     WHERE 
-        id = :id;
+        user_id = :user_id;
     EOM;
     
     $stmt = $dbh->prepare($sql);
-    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
     $stmt->execute();
 
     return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+function mypage_list()
+{
+    $dbh = connect_db();
+    $sql = <<<EOM
+    SELECT
+        *
+    FROM
+        internet_forum
+    WHERE
+        user_id = :user_id
+    EOM;
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $lists = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $lists;
+}
+
+function delete_photo($id){
+    $dbh = connect_db();
+
+    $sql = <<<EOM
+    DELETE 
+        FROM 
+    internet_forum
+        WHERE 
+    id = :id;
+    EOM;
+
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
 }

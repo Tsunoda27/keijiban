@@ -9,6 +9,7 @@ $dbh = connect_db();
 session_start();
 
 $current_user = '';
+$lists = display_list();
 
 if (empty($_SESSION['current_user'])) {
     header('Location: keijiban.php');
@@ -17,12 +18,9 @@ if (empty($_SESSION['current_user'])) {
     $current_user = $_SESSION['current_user'];
 }
 
-$user_id = filter_input(INPUT_GET, 'user_id');
+$id = filter_input(INPUT_GET, 'user_id');
 var_dump($current_user);
-// idを基にデータを取得
-$id = delete_mydata($user_id);
 
-$lists = mypage_list();
 ?>
 
 <!DOCTYPE html>
@@ -31,11 +29,6 @@ $lists = mypage_list();
 
 <body>
     <?php include_once __DIR__ . '/_header.php' ?>
-    <?php if (!empty($current_user)) : ?>
-        <a href="keijiban.php" class="add_button">
-            <i class="fa-solid fa-plus"></i>
-        </a>
-    <?php endif; ?>
 
     <section class="main_content wrapper">
         <div class="content">
@@ -58,18 +51,13 @@ $lists = mypage_list();
                 <!-- <p>< '投稿日時' . PHP_EOL . h($list['creared_at']) ?></p> -->
                 <hr class="kugirisen1">
                 <hr class="kugirisen2">
-                <div class="button">
-                    <a href="edit.php" class="edit_button">編 集</a>
-                    <button class="delete_button">削 除</button>
-                </div>
-            <?php endforeach; ?>
-            <!-- ?php if (!empty($current_user) && $current_user['id'] == $user_id['id']) : ?> -->
-            <!-- <div class="button"> -->
-                <!-- <button class="delete_button" onclick="if (!confirm('本当に削除してよろしいですか？')) {return false};location.href='mypage.php=?= h($user_id['id']) ?>'">削 除</button> -->
-            <!-- ?php endif; ?> --> 
+        <?php endforeach; ?>
         </div>
-        <hr class="kugirisen1">
-        <hr class="kugirisen2">
+            <div class="button">
+                <a href="edit.php" class="edit_button">編 集</a>
+                <button class="delete_button">削 除</button>
+            </div>
+        </div>
     </section>
 
     <?php include_once __DIR__ . '/_footer.php' ?>

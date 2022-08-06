@@ -12,8 +12,8 @@ $keyword = '';
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $keyword = filter_input(INPUT_GET, 'keyword');
     $keyword_param = '%' . $keyword . '%';
-    // $lists = search_list($keyword_param); $listを更新してしまっているためDESC効かなかった
-}
+    $lists = search_list($keyword_param); 
+} 
 
 ?>
 
