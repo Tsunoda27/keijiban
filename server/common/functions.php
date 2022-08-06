@@ -210,7 +210,7 @@ function search_list($keyword_param)
     return $lists;
 }
 
-function find_mydata($id)
+function delete_mydata($id)
 {
     $dbh = connect_db();
 

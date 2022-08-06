@@ -2,16 +2,13 @@
     // 関数ファイルを読み込む
     require_once __DIR__ . '/common/functions.php';
 
+    // データベースに接続
+    $dbh = connect_db();
+
     // セッション開始
     session_start();
 
     $current_user = '';
-
-    // パラメータが渡されていなければ一覧画面に戻す
-    if (empty($_GET['user_id'])) {
-        header('Location: index.php');
-        exit;
-    }
 
     if (isset($_SESSION['current_user'])) {
         $current_user = $_SESSION['current_user'];
@@ -20,7 +17,7 @@
     $user_id = filter_input(INPUT_GET, 'user_id');
 
     // idを基にデータを取得
-    $id = find_mydata($user_id);
+    $id = delete_mydata($user_id);
     ?>
 
   <!DOCTYPE html>
@@ -49,7 +46,6 @@
               <!-- <p>< '投稿日時' . PHP_EOL . h($list['creared_at']) ?></p> -->
               <?php if (!empty($current_user) && $current_user['id'] == $id['user_id']) : ?>
                   <div class="button">
-                      <a href="edit.php" class="edit_button">編 集</a>
                       <button class="delete_button" onclick="if (!confirm('本当に削除してよろしいですか？')) {return false};location.href='delete.php?photo_id=<?= h($photo['id']) ?>'">削 除</button>
                   </div>
               <?php endif; ?>

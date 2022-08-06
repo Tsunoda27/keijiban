@@ -12,7 +12,7 @@ $keyword = '';
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $keyword = filter_input(INPUT_GET, 'keyword');
     $keyword_param = '%' . $keyword . '%';
-    $lists = search_list($keyword_param);
+    // $lists = search_list($keyword_param); $listを更新してしまっているためDESC効かなかった
 }
 
 ?>
@@ -34,8 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     <h2 class="keijiban_title">わたしとみんなの目標掲示板</h2>
 
     <form action="keijiban.php" method="get">
-        <span>キーワード:</span>
-        <input type="search" name="keyword" placeholder="キーワードの入力">
+        <span>みんなの目標を検索:</span>
+        <input type="search" name="keyword" placeholder="検索ワードの入力">
         <input type="submit" value="検索"><br>
     </form>
 
