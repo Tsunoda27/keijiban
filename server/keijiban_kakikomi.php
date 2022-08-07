@@ -24,6 +24,7 @@ $action = '';
 $anxiety = '';
 $personality = '';
 $deadline = '';
+$badword = '%' . '殺' . '%';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // フォームに入力されたデータを受け取る
@@ -42,9 +43,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // $num5 = $_POST['anxiety'];
     // $num6 = $_POST['personality'];
     // $num7 = $_POST['deadline'];
+    //ここに禁止ワードでif文を入れたい!!
     if ((empty($nickname)) || empty($goal) || empty($target) || empty($action) || empty($anxiety) || empty($personality) || empty($deadline)) {
         $err_msg = '全ての項目を入力してください';
-    } else {
+    } elseif ($goal == $badword) {
+        echo '禁止ワードが含まれています';
+    }    
+     else {
         $msg = "入力お疲れ様でした!!" . PHP_EOL . "目標掲示板に反映させていただきました。" . PHP_EOL . "あなたの目標達成を心から応援しています!!";
     }
 }

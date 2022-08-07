@@ -17,10 +17,10 @@ if (empty($_SESSION['current_user'])) {
     $current_user = $_SESSION['current_user'];
 }
 
-$user_id = filter_input(INPUT_GET, 'user_id');
+$id = filter_input(INPUT_GET, 'user_id');
 var_dump($current_user);
 // idを基にデータを取得
-$id = delete_mydata($user_id);
+// $id = delete_mydata($user_id);
 
 $lists = mypage_list();
 ?>

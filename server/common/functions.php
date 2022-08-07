@@ -222,7 +222,7 @@ function delete_mydata($user_id)
     WHERE 
         user_id = :user_id;
     EOM;
-    
+
     $stmt = $dbh->prepare($sql);
     $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
     $stmt->execute();
@@ -230,26 +230,29 @@ function delete_mydata($user_id)
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-function mypage_list()
+// function mypage_list()
+// {
+//     $dbh = connect_db();
+
+//     $sql = <<<EOM
+//     SELECT
+//         *
+//     FROM
+//         users
+//     INNER JOIN
+//         internet_forum
+//      ON
+//         users.id = internet_forum.user_id
+//      EOM;
+
+//     $stmt = $dbh->prepare($sql);
+//     $stmt->execute();
+//     $lists = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//     return $lists;
+// }
+
+function delete_photo($id)
 {
-    $dbh = connect_db();
-    $sql = <<<EOM
-    SELECT
-        *
-    FROM
-        internet_forum
-    WHERE
-        user_id = :user_id
-    EOM;
-    $stmt = $dbh->prepare($sql);
-    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
-    $stmt->execute();
-    $lists = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    return $lists;
-}
-
-function delete_photo($id){
     $dbh = connect_db();
 
     $sql = <<<EOM

@@ -573,7 +573,7 @@ input[type="password"]::placeholder {
 }
 
 /*-------------------------------------------
-      mypage.php
+      mypage_sub.php
       -------------------------------------------*/
 .content {
     width: 50%;
@@ -581,8 +581,9 @@ input[type="password"]::placeholder {
 }
 
 .button {
-    margin-top: 10px;
-    display: flex;
+    margin-top: 25px;
+    text-align: center;
+    /* display: flex; */
     justify-content: flex-end;
 }
 .edit_button {
@@ -597,9 +598,9 @@ input[type="password"]::placeholder {
     font-size: 18px;
     border-radius: 18px;
     padding: 5px 30px;
-    background: #CCCCCC;
+    background: red;
     margin-left: 10px;
-    color: #FFFFFF;
+    color: black;
 }
 
 /*-------------------------------------------

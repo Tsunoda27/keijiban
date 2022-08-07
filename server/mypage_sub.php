@@ -9,7 +9,7 @@ $dbh = connect_db();
 session_start();
 
 $current_user = '';
-$lists = display_list();
+$user = '';
 
 if (empty($_SESSION['current_user'])) {
     header('Location: keijiban.php');
@@ -19,8 +19,9 @@ if (empty($_SESSION['current_user'])) {
 }
 
 $id = filter_input(INPUT_GET, 'user_id');
-var_dump($current_user);
-
+$lists = mypage_list();
+// $jobs = find_com_job_all();
+// $internet_forum = find_photos_all();
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +33,11 @@ var_dump($current_user);
 
     <section class="main_content wrapper">
         <div class="content">
-            <?php foreach ($lists as $list) : ?>
+        <!-- ?php foreach ($jobs as $job) : ?> -->
+       <!-- ?php if ($job['company_id'] == $current_user['id']) : ?> -->
+        <!-- すぐ下のforeachを変える　あとは指定する関数が重要だからチェックすること -->
+        <?php if ($user['user_id'] == $current_user['id']) : ?>
+                    <?php foreach ($lists as $list) : ?>
                 <br>
                 <p class="keijiban_label">ニックネーム</p>
                 <p class="keijiban_answer"><?= h($list['name']) ?></p><br>
@@ -48,9 +53,10 @@ var_dump($current_user);
                 <p class="keijiban_answer"><?= h($list['personality']) ?></p><br>
                 <p class="keijiban_label">目標達成の期日</p>
                 <p class="keijiban_answer"><?= h($list['deadline']) ?></p><br>
-                <!-- <p>< '投稿日時' . PHP_EOL . h($list['creared_at']) ?></p> -->
+                <!-- <p class="keijiban_label">投稿日時</p> 
+                <p class="keijiban_answer">?= h($list['creared_at']) ?></p> -->
                 <hr class="kugirisen1">
-                <hr class="kugirisen2">
+                <hr class="kugirisen2"><br>
         <?php endforeach; ?>
         </div>
             <div class="button">
